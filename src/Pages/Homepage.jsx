@@ -88,16 +88,11 @@ function Homepage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-6 md:overflow-visible md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 px-4" style={{ WebkitOverflowScrolling: 'touch', scrollSnapType: 'x mandatory' }}>
           {categoriesLoading ? (
-            <div className="col-span-full flex items-center justify-center py-12" role="status" aria-live="polite">
-              <div className="flex flex-col items-center">
-                <svg className="animate-spin h-10 w-10 text-[#C72F61]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden>
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
-                </svg>
-                <p className="mt-3 text-gray-600">Loading categories...</p>
-              </div>
+            <div className="min-w-[86vw] md:min-w-0 flex-shrink-0 snap-center mx-3 bg-white rounded-xl shadow-md overflow-hidden p-6 animate-pulse col-span-full" aria-hidden>
+              <div className="h-56 bg-gray-100 flex items-center justify-center overflow-hidden rounded-md mb-4" />
+              <div className="h-4 bg-gray-200 rounded w-3/4 mb-2" />
             </div>
           ) : categoriesError ? (
             <div className="col-span-full text-center text-red-600">
@@ -107,7 +102,7 @@ function Homepage() {
             categories.map((category) => (
               <div
                 key={category._id}
-                className="group bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
+                className="min-w-[86vw] md:min-w-0 flex-shrink-0 snap-center mx-3 group bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
               >
                 <div className="h-56 bg-gray-100 flex items-center justify-center overflow-hidden">
                   <img

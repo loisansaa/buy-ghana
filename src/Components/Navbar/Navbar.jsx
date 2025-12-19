@@ -80,10 +80,10 @@ function Navbar() {
       {/* Mobile Menu */}
       <div className={`md:hidden backdrop-blur-md bg-white/80 shadow-md w-1/2 absolute top-full right-0 transition-all duration-300 ${isOpen ? 'max-h-screen py-4' : 'max-h-0 overflow-hidden'}`}>
         <div className="flex flex-col items-center space-y-4">
-          <Link to="/" className="text-gray-700 hover:text-[#C72F61] font-medium">Home</Link>
-          <Link to="/products" className="text-gray-700 hover:text-[#C72F61] font-medium">Products</Link>
-          <Link to="/about" className="text-gray-700 hover:text-[#C72F61] font-medium">About Us</Link>
-          <Link to="/support" className="text-gray-700 hover:text-[#C72F61] font-medium">Support</Link>
+          <Link to="/" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-[#C72F61] font-medium">Home</Link>
+          <Link to="/products" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-[#C72F61] font-medium">Products</Link>
+          <Link to="/about" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-[#C72F61] font-medium">About Us</Link>
+          <Link to="/support" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-[#C72F61] font-medium">Support</Link>
          
         </div>
       </div>

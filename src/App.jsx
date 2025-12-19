@@ -8,12 +8,15 @@ import AboutUs from './Pages/AboutUs.jsx';
 import Support  from './Pages/Support.jsx';
 import CartPage from './Pages/Cart.jsx';
 import { CartProvider } from './Context/CartContext.jsx';
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop.jsx';
+import BackToTop from './Components/BackToTop/BackToTop.jsx';
 
 function App() {
   return (
    <div>
     <CartProvider>
       <Router>
+        <ScrollToTop />
         <Navbar />
 
         <Routes>
@@ -25,6 +28,7 @@ function App() {
         </Routes>
 
         <Footer />
+        <BackToTop />
       </Router>
     </CartProvider>
    </div>

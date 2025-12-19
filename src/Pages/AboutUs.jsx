@@ -41,7 +41,7 @@ function AboutUs() {
         <div className="prose max-w-xl text-gray-700 mx-auto text-center md:text-left">
           <h3 className="text-xl font-semibold">Our Mission</h3>
           <p>Our mission is to empower local artisans by providing them with a platform to showcase and sell their handmade crafts to a global audience. We aim to preserve traditional art forms while promoting sustainable economic growth within Ghanaian communities.</p>
-          <h3 className="text-xl font-semibold mt-4">Our Vision</h3>
+          <h3 className="text-xl font-semibold mt-8">Our Vision</h3>
           <p>Our vision is to be the leading online marketplace for authentic Ghanaian handmade crafts, recognized for our commitment to quality, cultural preservation, and social impact. We aspire to create a world where artisans thrive, and their unique creations are celebrated worldwide.</p>
         </div>
       </div>
