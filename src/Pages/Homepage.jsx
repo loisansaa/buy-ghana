@@ -88,18 +88,12 @@ function Homepage() {
           </p>
         </div>
 
-        <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-6 md:overflow-visible md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-6 md:overflow-visible md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 px-4">
           {categoriesLoading ? (
-            Array.from({ length: 6 }).map((_, i) => (
-              <div
-                key={i}
-                className="min-w-[260px] md:min-w-0 flex-shrink-0 snap-start bg-white rounded-xl shadow-md overflow-hidden p-5 animate-pulse"
-                aria-hidden
-              >
-                <div className="h-56 bg-gray-100 flex items-center justify-center overflow-hidden rounded-md mb-4" />
-                <div className="h-4 bg-gray-200 rounded w-3/4 mb-2" />
-              </div>
-            ))
+            <div className="min-w-[calc(100%-48px)] md:min-w-0 flex-shrink-0 snap-center mx-3 bg-white rounded-xl shadow-md overflow-hidden p-6 animate-pulse col-span-full" aria-hidden>
+              <div className="h-56 bg-gray-100 flex items-center justify-center overflow-hidden rounded-md mb-4" />
+              <div className="h-4 bg-gray-200 rounded w-3/4 mb-2" />
+            </div>
           ) : categoriesError ? (
             <div className="col-span-full text-center text-red-600">
               {categoriesError} <button onClick={fetchCategories} className="ml-3 underline">Retry</button>
@@ -108,7 +102,7 @@ function Homepage() {
             categories.map((category) => (
               <div
                 key={category._id}
-                className="min-w-[260px] md:min-w-0 flex-shrink-0 snap-start group bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
+                className="min-w-[calc(100%-48px)] md:min-w-0 flex-shrink-0 snap-center mx-3 group bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
               >
                 <div className="h-56 bg-gray-100 flex items-center justify-center overflow-hidden">
                   <img
