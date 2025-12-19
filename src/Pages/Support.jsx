@@ -27,7 +27,7 @@ function Support() {
         <h1 className="text-3xl font-extrabold text-gray-900">Support</h1>
         <p className="mt-2 text-gray-600">
           Need help? Fill the form below or email us at{' '}
-          <a href="mailto:support@buyghana.com" className="text-indigo-600 hover:underline">support@buyghana.com</a>.
+          <a href="mailto:support@buyghana.com" className="text-[#C72F61] hover:underline">support@buyghana.com</a>.
         </p>
       </div>
 
@@ -81,7 +81,7 @@ function Support() {
             <div>
               <button
                 type="submit"
-                className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="inline-flex items-center px-4 py-2 bg-[#C72F61] text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               >
                 Send message
               </button>
